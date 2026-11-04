@@ -1,0 +1,4 @@
+# Only needed for the LiveKit voice agent (voice_agent.py): pip install -r requirements-voice.txt
+livekit-agents>=1.8
+livekit-plugins-groq>=1.8  # the conversation model runs on Groq when GROQ_API_KEY is set
+livekit-plugins-silero>=1.8  # voice-activity detection, needed with Groq speech-to-text

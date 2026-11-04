@@ -1,0 +1,12 @@
+.env
+.git
+.venv
+__pycache__
+*.db
+*.db-wal
+*.db-shm
+backups
+.cache
+tests
+screenshots
+data

@@ -1,0 +1,10 @@
+services:
+  support-desk:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file: .env          # secrets stay out of the image
+    volumes:
+      - ./data:/app/data    # SQLite: accounts, tickets, audit trail
+      - ./.cache:/app/.cache  # FAISS index (embeddings), so restarts make no embedding calls
+    restart: unless-stopped

@@ -1,0 +1,55 @@
+# Gold set for RAG evaluation. Each question lists the knowledge-base sections that answer it, as "<file stem>#<section heading>".
+# relevant: []  means the knowledge base does NOT contain the answer: retrieval should return nothing and the reply must not invent one.
+# Written by hand in natural customer wording (not copied from headings). Keep it honest: add questions where the system is weak.
+
+# ---------- shipping ----------
+- {id: q01, question: "How long does standard delivery take?", relevant: ["shipping_policy#Delivery timelines"]}
+- {id: q02, question: "Is shipping free on my order?", relevant: ["shipping_policy#Delivery timelines"]}
+- {id: q03, question: "How do I track my parcel?", relevant: ["shipping_policy#Tracking your order"]}
+- {id: q04, question: "My package is a week late, what should I do?", relevant: ["shipping_policy#Late or delayed orders"]}
+- {id: q05, question: "I typed the wrong delivery address, can I change it?", relevant: ["shipping_policy#Changing the delivery address"]}
+- {id: q06, question: "Can I cancel an order after placing it?", relevant: ["shipping_policy#Order cancellation"]}
+- {id: q07, question: "The box arrived with one of my items missing", relevant: ["shipping_policy#Missing items and wrong items"]}
+- {id: q08, question: "Do you ship overseas and who pays the customs fees?", relevant: ["shipping_policy#Delivery timelines"]}
+
+# ---------- refunds and returns ----------
+- {id: q09, question: "How many days do I have to return something?", relevant: ["refund_policy#Return window"]}
+- {id: q10, question: "What are the steps to send an item back for a refund?", relevant: ["refund_policy#How to return an item and get a refund"]}
+- {id: q11, question: "When will the money reach my account after I return a product?", relevant: ["refund_policy#Refund timelines"]}
+- {id: q12, question: "The jacket I received is ripped, can I get a replacement?", relevant: ["refund_policy#Damaged or defective items"]}
+- {id: q13, question: "Which things can I not return at all?", relevant: ["refund_policy#Items that cannot be returned"]}
+- {id: q14, question: "These shoes are the wrong size, can I swap them for another pair?", relevant: ["refund_policy#Exchanges", "product_faq#Product sizing"]}
+- {id: q15, question: "My parcel got lost in transit, do I get my money back?", relevant: ["refund_policy#Late order refunds", "shipping_policy#Late or delayed orders"]}
+
+# ---------- account and login ----------
+- {id: q16, question: "I forgot my password and cannot log in", relevant: ["account_and_login#How to reset your password"]}
+- {id: q17, question: "The password reset email never showed up", relevant: ["account_and_login#Reset email did not arrive"]}
+- {id: q18, question: "My account is locked after too many wrong attempts", relevant: ["account_and_login#Locked account"]}
+- {id: q19, question: "I lost the phone with my authenticator app", relevant: ["account_and_login#Two-factor authentication problems"]}
+- {id: q20, question: "How do I change the email address on my profile?", relevant: ["account_and_login#Updating your email address or name"]}
+- {id: q21, question: "I want my account permanently deleted", relevant: ["account_and_login#Deleting your account"]}
+
+# ---------- billing and payments ----------
+- {id: q22, question: "Which credit cards do you accept?", relevant: ["billing_and_payments#Accepted payment methods"]}
+- {id: q23, question: "At what point is my card actually charged?", relevant: ["billing_and_payments#When your card is charged"]}
+- {id: q24, question: "I can see two charges on my statement for one order", relevant: ["billing_and_payments#Duplicate or incorrect charges", "billing_and_payments#When your card is charged"]}
+- {id: q25, question: "I want to file a chargeback with my bank", relevant: ["billing_and_payments#Payment disputes and chargebacks"]}
+- {id: q26, question: "My payment keeps failing at checkout", relevant: ["billing_and_payments#Failed payments"]}
+- {id: q27, question: "Can I use two promo codes on the same order?", relevant: ["billing_and_payments#Promo codes"]}
+- {id: q28, question: "I need an invoice with my company tax number", relevant: ["billing_and_payments#Invoices"]}
+
+# ---------- products ----------
+- {id: q29, question: "What does the warranty cover?", relevant: ["product_faq#Warranty"]}
+- {id: q30, question: "My blender jar is cracked and leaking", relevant: ["product_faq#Blenders and kitchen appliances", "refund_policy#Damaged or defective items"]}
+- {id: q31, question: "How can I get notified when a sold-out item is back?", relevant: ["product_faq#Out of stock items"]}
+- {id: q32, question: "How should I wash the garment?", relevant: ["product_faq#Product care"]}
+- {id: q33, question: "How long is the battery covered for?", relevant: ["product_faq#Batteries and chargers"]}
+- {id: q34, question: "What hours is your phone support open?", relevant: ["product_faq#Contacting support"]}
+
+# ---------- NOT in the knowledge base: retrieval should return nothing, replies must not invent an answer ----------
+- {id: u01, question: "Do you sell gift cards for a company of 500 employees with custom branding?", relevant: []}
+- {id: u02, question: "What is the capital of France?", relevant: []}
+- {id: u03, question: "Do you offer a student discount?", relevant: []}
+- {id: u04, question: "Who is the CEO of NovaCart?", relevant: []}
+- {id: u05, question: "Will you match a lower price from a competitor?", relevant: []}
+- {id: u06, question: "Do you have physical stores I can visit?", relevant: []}

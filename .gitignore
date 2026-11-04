@@ -1,0 +1,46 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data (contains customer text and password hashes)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.migrated
+logs/
+backups/
+.cache/
+*.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Eval tooling and local caches
+.deepeval/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Streamlit secrets and local files
+.streamlit/secrets.toml
+*.log
+
+# Voice agent local state and downloaded models
+.livekit/
+*.onnx
+
+# Generated files not meant for the repo
+novacart-business-case.png
